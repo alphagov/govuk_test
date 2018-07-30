@@ -24,8 +24,12 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "capybara"
   spec.add_dependency "chromedriver-helper"
+  spec.add_dependency "database_cleaner"
+  spec.add_dependency "factory_bot_rails"
   spec.add_dependency "puma"
   spec.add_dependency "selenium-webdriver"
+  spec.add_dependency "simplecov"
+  spec.add_dependency "webmock"
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
