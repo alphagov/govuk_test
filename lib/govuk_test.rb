@@ -5,10 +5,13 @@ require "puma"
 require "selenium-webdriver"
 
 module GovukTest
-  def self.configure
+  def self.configure(options = {})
+    chrome_options = %w(headless disable-gpu)
+    chrome_options << "--window-size=#{options[:window_size]}" if options[:window_size]
+
     Capybara.register_driver :headless_chrome do |app|
       capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-        chromeOptions: { args: %w(headless disable-gpu) }
+        chromeOptions: { args: chrome_options }
       )
 
       Capybara::Selenium::Driver.new(
