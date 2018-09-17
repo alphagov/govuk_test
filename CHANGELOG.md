@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## Unreleased
+
+* Explicitly require the `chromedriver-helper` Gem to fix the path to the binary.
+
 ## 0.2.0
 
 * Allow passing options to GovukTest.configure. Currently only `window_size` is supported. This is

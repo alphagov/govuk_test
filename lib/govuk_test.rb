@@ -2,6 +2,7 @@ require "govuk_test/version"
 
 require "capybara"
 require "puma"
+require "chromedriver-helper"
 require "selenium-webdriver"
 
 module GovukTest
