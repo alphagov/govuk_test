@@ -7,7 +7,7 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
-## Unreleased
+## 0.2.1
 
 * Explicitly require the `chromedriver-helper` Gem to fix the path to the binary.
 
