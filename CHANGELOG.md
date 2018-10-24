@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 0.3.0
+
+* Don't download chromedriver if it's already available.
+
 ## 0.2.1
 
 * Explicitly require the `chromedriver-helper` Gem to fix the path to the binary.
