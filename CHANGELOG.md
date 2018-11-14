@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 0.3.1
+
+* Revert "Don't force use of chromedriver-helper" - which seems to break apps in CI
+
 ## 0.3.0
 
 * Don't download chromedriver if it's already available.
