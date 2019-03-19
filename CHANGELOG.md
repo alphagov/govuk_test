@@ -7,6 +7,11 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## Unreleased
+
+* Guard against older versions of the chromedriver-helper gem being
+  installed when looking for a chromedriver executable.
+
 ## 0.4.0
 
 * Don't download chromedriver if it's already available.
