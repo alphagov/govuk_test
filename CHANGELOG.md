@@ -7,6 +7,12 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 0.4.1
+
+* Avoid issues with older versions of the chromedriver-helper gem, by
+  only using chromedriver form the PATH if
+  GOVUK_TEST_USE_SYSTEM_CHROMEDRIVER is set in the environment.
+
 ## 0.4.0
 
 * Don't download chromedriver if it's already available.
