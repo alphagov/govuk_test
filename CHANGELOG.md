@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 0.4.2
+
+* Silence Puma logs during spec suite.
+
 ## 0.4.1
 
 * Avoid issues with older versions of the chromedriver-helper gem, by
