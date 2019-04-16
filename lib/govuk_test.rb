@@ -30,5 +30,6 @@ module GovukTest
     end
 
     Capybara.javascript_driver = :headless_chrome
+    Capybara.server = :puma, { Silent: true }
   end
 end
