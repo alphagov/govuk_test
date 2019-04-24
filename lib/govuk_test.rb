@@ -10,13 +10,6 @@ module GovukTest
     chrome_options = %w(headless disable-gpu)
     chrome_options << "--window-size=#{options[:window_size]}" if options[:window_size]
 
-    if ENV['GOVUK_TEST_USE_SYSTEM_CHROMEDRIVER']
-      # Use the installed chromedriver, rather than chromedriver-helper
-      Selenium::WebDriver::Chrome.driver_path = File.which("chromedriver")
-    else
-      require 'chromedriver-helper'
-    end
-
     Capybara.register_driver :headless_chrome do |app|
       capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
         chromeOptions: { args: chrome_options }

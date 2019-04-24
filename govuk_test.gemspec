@@ -23,7 +23,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "capybara"
-  spec.add_dependency "chromedriver-helper"
   spec.add_dependency "ptools"
   spec.add_dependency "puma"
   spec.add_dependency "selenium-webdriver"
