@@ -20,6 +20,8 @@ Somewhere in your `spec_helper` put:
 GovukTest.configure
 ```
 
+>This will overwrite any Webmock disabled net connections in your application.
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

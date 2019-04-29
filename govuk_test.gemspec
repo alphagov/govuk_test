@@ -24,7 +24,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "capybara"
   spec.add_dependency "webdrivers"
-  spec.add_dependency "ptools"
   spec.add_dependency "puma"
   spec.add_dependency "selenium-webdriver"
 
