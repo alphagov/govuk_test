@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## Unreleased
+
+* Swap the deprecated chromedriver-helper gem for webdrivers gem
+
 ## 0.4.2
 
 * Silence Puma logs during spec suite.
