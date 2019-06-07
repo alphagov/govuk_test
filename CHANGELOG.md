@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## Unreleased
+
+* Allow `.configure` to accept extra chrome options
+
 ## 0.4.3
 
 * Swap the deprecated chromedriver-helper gem for webdrivers gem

@@ -14,10 +14,25 @@ And then execute:
 
 ## Usage
 
-Somewhere in your `spec_helper` put:
+Somewhere in your `spec_helper`, `rails_helper`, or `spec/support/govuk_test.rb` put:
 
 ```rb
 GovukTest.configure
+```
+
+It's also possible to pass optional arguments `:chrome_options` and/or `:window_size `
+to `GovukTest.configure`:
+
+```rb
+GovukTest.configure(chrome_options: { some_key: "some value" })
+
+# or
+
+GovukTest.configure(window_size: "1366,768")
+
+# or
+
+GovukTest.configure(chrome_options: { some_key: "some value" }, window_size: "800,600")
 ```
 
 ## License

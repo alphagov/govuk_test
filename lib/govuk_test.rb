@@ -23,7 +23,7 @@ module GovukTest
 
     Capybara.register_driver :headless_chrome do |app|
       capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-        chromeOptions: { args: chrome_options }
+        chromeOptions: { args: chrome_options }.merge(options.fetch(:chrome_options, {}))
       )
 
       Capybara::Selenium::Driver.new(
