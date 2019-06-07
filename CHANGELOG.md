@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 0.5.0
+
+* No changes: new release for semantic versioning purposes (0.4.4 should have been 0.5.0)
+
 ## 0.4.4
 
 * Allow `.configure` to accept extra chrome options
