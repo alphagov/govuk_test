@@ -7,7 +7,7 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
-## Unreleased
+## 0.4.4
 
 * Allow `.configure` to accept extra chrome options
 
