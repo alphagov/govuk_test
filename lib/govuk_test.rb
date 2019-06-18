@@ -4,16 +4,12 @@ require "capybara"
 require "puma"
 require "selenium-webdriver"
 
-unless ENV['GOVUK_TEST_USE_SYSTEM_CHROMEDRIVER']
-  require 'webdrivers'
+unless ENV["GOVUK_TEST_USE_SYSTEM_CHROMEDRIVER"]
+  require "webdrivers"
 
   # This stop webdrivers doing a lazy check for new versions
   # of chromedriver, which interferes with WebMock.disable_net_connect
-  if ::Selenium::WebDriver::Service.respond_to? :driver_path=
-    Selenium::WebDriver::Chrome::Service.driver_path = Webdrivers::Chromedriver.update
-  else
-    Selenium::WebDriver::Chrome.driver_path = Webdrivers::Chromedriver.update
-  end
+  Selenium::WebDriver::Chrome::Service.driver_path = Webdrivers::Chromedriver.update
 end
 
 module GovukTest
