@@ -7,6 +7,13 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## Unreleased
+
+* BREAKING: `.configure` accepts a `chrome_options` argument of an instance of
+  `Selenium::Webdriver::Chrome::Options` rather than a hash. The `window_size`
+  argument is dropped and can be done by configuring the `chrome_options`
+  instance.
+
 ## 0.5.0
 
 * No changes: new release for semantic versioning purposes (0.4.4 should have been 0.5.0)
