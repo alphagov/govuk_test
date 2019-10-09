@@ -7,6 +7,14 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 1.0.2
+
+* Allow new versions of 'webdrivers' above 4
+
+## 1.0.1
+
+* Ensure version of 'webdrivers' is at least 4
+
 ## 1.0.0
 
 * BREAKING: `.configure` accepts a `chrome_options` argument of an instance of
