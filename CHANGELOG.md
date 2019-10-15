@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 1.0.3
+
+* Add Brakeman as a dependency.
+
 ## 1.0.2
 
 * Allow new versions of 'webdrivers' above 4
