@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "webdrivers", ">= 4"
   spec.add_dependency "puma"
   spec.add_dependency "selenium-webdriver", ">= 3.142"
+  spec.add_dependency "brakeman", "~> 4.6"
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
