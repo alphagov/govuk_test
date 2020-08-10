@@ -1,4 +1,5 @@
-require 'govuk_test'
+require "govuk_test"
+require "climate_control"
 
 RSpec.describe GovukTest do
   describe ".configure" do
@@ -7,6 +8,18 @@ RSpec.describe GovukTest do
       expect { GovukTest.configure }
         .to change { Capybara.javascript_driver }
         .to(:headless_chrome)
+    end
+
+    it "can specify chrome to run in no sandbox mode" do
+      GovukTest.configure
+      driver = Capybara.drivers[:headless_chrome].call
+      expect(driver.options[:options].args).not_to include("--no-sandbox")
+
+      ClimateControl.modify(GOVUK_TEST_CHROME_NO_SANDBOX: "true") do
+        GovukTest.configure
+        driver = Capybara.drivers[:headless_chrome].call
+        expect(driver.options[:options].args).to include("--no-sandbox")
+      end
     end
 
     context "with chrome_options" do

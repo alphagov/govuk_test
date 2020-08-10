@@ -16,6 +16,7 @@ module GovukTest
   def self.configure(chrome_options: nil)
     chrome_options ||= Selenium::WebDriver::Chrome::Options.new
     chrome_options.headless!
+    chrome_options.add_argument("--no-sandbox") if ENV["GOVUK_TEST_CHROME_NO_SANDBOX"]
 
     Capybara.register_driver :headless_chrome do |app|
       Capybara::Selenium::Driver.new(app, browser: :chrome, options: chrome_options)

@@ -7,6 +7,11 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## Unreleased
+
+* `GOVUK_TEST_CHROME_NO_SANDBOX` can be set to default Chrome to be running
+  with the `--no-sandbox` argument.
+
 ## 1.0.3
 
 * Add Brakeman as a dependency.
