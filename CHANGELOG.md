@@ -9,6 +9,9 @@
 
 ## Unreleased
 
+* BREAKING: `.configure` no longer modifies passed in options, instead call
+  `.chrome_selenium_options` to get base options that can be modified before
+  passing into `.configure`.
 * `GOVUK_TEST_CHROME_NO_SANDBOX` can be set to default Chrome to be running
   with the `--no-sandbox` argument.
 
