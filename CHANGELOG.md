@@ -9,6 +9,12 @@
 
 ## Unreleased
 
+* BREAKING: `.configure` no longer accepts options. If you need to modify the
+  headless_chrome selenium driver you can re-register the driver with
+  `Capybara.register_driver`.
+* `GovukTest.headless_chrome_selenium_options` added to allow accessing the
+  headless Chrome selenium options for other contexts (such as configuring
+  Jasmine).
 * `GOVUK_TEST_CHROME_NO_SANDBOX` can be set to default Chrome to be running
   with the `--no-sandbox` argument.
 

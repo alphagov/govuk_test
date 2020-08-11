@@ -5,35 +5,66 @@ Gem to package test dependencies and config for GOV.UK applications. Cousin of [
 ## Installation
 
 ```ruby
-gem 'govuk_test'
+gem "govuk_test"
 ```
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 ## Usage
 
-Somewhere in your `spec_helper`, `rails_helper`, or `spec/support/govuk_test.rb` put:
+Somewhere in your `spec_helper.rb`, `rails_helper.rb`, or
+`spec/support/govuk_test.rb` put:
 
-```rb
+```ruby
 GovukTest.configure
 ```
 
-It's also possible to pass optional arguments `:chrome_options` and/or `:window_size `
-to `GovukTest.configure`:
+This will configure [Capybara][] to run any JavaScript enabled tests
+against a [Selenium][] driven instance of
+[headless Google Chrome][headless-chrome].
 
-```rb
-GovukTest.configure(chrome_options: { some_key: "some value" })
+If you need to use this as a root user (such as within some docker containers)
+you will need to set a `GOVUK_TEST_CHROME_NO_SANDBOX` environment variable.
 
-# or
+You can reuse the Selenium options for headless Google Chrome for configuring
+other Selenium driven tests, such as [Jasmine][]:
 
-GovukTest.configure(window_size: "1366,768")
-
-# or
-
-GovukTest.configure(chrome_options: { some_key: "some value" }, window_size: "800,600")
+```ruby
+class ChromeHeadlessJasmineConfigurer < JasmineSeleniumRunner::ConfigureJasmine
+  def selenium_options
+    { options: GovukTest.headless_chrome_selenium_options }
+  end
+end
 ```
+
+Should you need to configure the options for your application the recommended
+approach is to re-register the headless Google Chrome driver:
+
+```ruby
+GovukTest.configure
+
+Capybara.register_driver :headless_chrome do |app|
+  chrome_options = GovukTest.headless_chrome_selenium_options
+  chrome_options.add_argument("--disable-web-security")
+  chrome_options.add_argument("--window-size=1400,1400")
+
+  Capybara::Selenium::Driver.new(
+    app,
+    browser: :chrome,
+    desired_capabilities: { acceptInsecureCerts: true },
+    options: chrome_options,
+  )
+end
+```
+
+[Capybara]: https://github.com/teamcapybara/capybara
+[Selenium]: https://selenium.dev
+[headless-chrome]: https://developers.google.com/web/updates/2017/04/headless-chrome
+[Jasmine]: https://github.com/jasmine/jasmine_selenium_runner
 
 ## License
 
