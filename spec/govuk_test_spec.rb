@@ -17,21 +17,21 @@ RSpec.describe GovukTest do
         .to eq(GovukTest.chrome_selenium_options.args)
     end
 
-    context "with chrome_options" do
-      it "can override the options for the headless_chrome driver" do
-        chrome_options = Selenium::WebDriver::Chrome::Options.new
-        chrome_options.add_option(:window_size, "1366,768")
-
-        GovukTest.configure(chrome_options: chrome_options)
-
-        driver = Capybara.drivers[:headless_chrome].call
-
-        expect(driver.options[:options]).to be(chrome_options)
+    it "can configure the chrome options with a block" do
+      GovukTest.configure do |chrome_selenium_options|
+        chrome_selenium_options.add_option(:window_size, "1366,768")
       end
+
+      driver = Capybara.drivers[:headless_chrome].call
+      expect(driver.options[:options].options).to match(
+        hash_including(window_size: "1366,768")
+      )
     end
   end
 
   describe ".chrome_selenium_options" do
+    # reset configuration before each test run
+    before { GovukTest.configure }
     it "returns an instance of Selenium::WebDriver::Chrome::Options set as headless" do
       options = GovukTest.chrome_selenium_options
 
@@ -43,6 +43,7 @@ RSpec.describe GovukTest do
       expect(GovukTest.chrome_selenium_options.args).not_to include("--no-sandbox")
 
       ClimateControl.modify(GOVUK_TEST_CHROME_NO_SANDBOX: "1") do
+        GovukTest.configure
         expect(GovukTest.chrome_selenium_options.args).to include("--no-sandbox")
       end
     end
