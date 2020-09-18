@@ -13,15 +13,21 @@ unless ENV["GOVUK_TEST_USE_SYSTEM_CHROMEDRIVER"]
 end
 
 module GovukTest
-  def self.configure(chrome_options: nil)
-    chrome_options ||= Selenium::WebDriver::Chrome::Options.new
-    chrome_options.headless!
-
+  def self.configure
     Capybara.register_driver :headless_chrome do |app|
-      Capybara::Selenium::Driver.new(app, browser: :chrome, options: chrome_options)
+      Capybara::Selenium::Driver.new(app,
+                                     browser: :chrome,
+                                     options: headless_chrome_selenium_options)
     end
 
     Capybara.javascript_driver = :headless_chrome
     Capybara.server = :puma, { Silent: true }
+  end
+
+  def self.headless_chrome_selenium_options
+    Selenium::WebDriver::Chrome::Options.new.tap do |options|
+      options.headless!
+      options.add_argument("--no-sandbox") if ENV["GOVUK_TEST_CHROME_NO_SANDBOX"]
+    end
   end
 end
