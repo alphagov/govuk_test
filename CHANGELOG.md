@@ -7,7 +7,7 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
-## Unreleased
+## 2.0.0
 
 * BREAKING: `.configure` no longer accepts options. If you need to modify the
   headless_chrome selenium driver you can re-register the driver with
