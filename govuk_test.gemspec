@@ -27,6 +27,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "puma"
   spec.add_dependency "selenium-webdriver", ">= 3.142"
   spec.add_dependency "brakeman", "~> 4.6"
+  spec.add_dependency "pact"
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "climate_control"
