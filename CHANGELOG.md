@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 2.1.1
+
+* Add `pact` as a dependency
+
 ## 2.1.0
 
 * Add pact test branch verify rake task
