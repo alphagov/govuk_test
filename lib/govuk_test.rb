@@ -1,3 +1,4 @@
+require "govuk_test/railtie" if defined?(Rails)
 require "govuk_test/version"
 
 require "capybara"

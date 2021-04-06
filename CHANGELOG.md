@@ -7,6 +7,11 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## Unreleased
+
+* Add pact test branch verify rake task
+* Add Railtie to load rake tasks
+
 ## 2.0.0
 
 * BREAKING: `.configure` no longer accepts options. If you need to modify the
