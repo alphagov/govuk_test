@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## Unreleased
+
+* Allow pact testing against Publishing API
+
 ## 2.1.1
 
 * Add `pact` as a dependency
