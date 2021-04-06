@@ -7,7 +7,7 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
-## Unreleased
+## 2.1.0
 
 * Add pact test branch verify rake task
 * Add Railtie to load rake tasks
