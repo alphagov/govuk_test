@@ -9,6 +9,7 @@
 
 ## Unreleased
 
+* Add pact test branch verify rake task
 * Add Railtie to load rake tasks
 
 ## 2.0.0
