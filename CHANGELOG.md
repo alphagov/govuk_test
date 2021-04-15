@@ -7,7 +7,7 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
-## Unreleased
+## 2.2.0
 
 * Remove pact test branch verify rake task
 * Remove `pact` and `climate_control` dependencies
