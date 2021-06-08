@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 2.3.0
+
+* Update brakeman to fix false positive warning ([#41](https://github.com/alphagov/govuk_test/pull/41))
+
 ## 2.2.0
 
 * Remove pact test branch verify rake task
