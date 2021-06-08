@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "brakeman", "~> 4.6"
+  spec.add_dependency "brakeman", ">= 5.0.2"
   spec.add_dependency "capybara"
   spec.add_dependency "puma"
   spec.add_dependency "selenium-webdriver", ">= 3.142"
