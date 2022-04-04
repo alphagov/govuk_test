@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 3.0.1
+
+* Resolve Selenium deprecation warning on options argument by requiring higher minimum versions ([#44](https://github.com/alphagov/govuk_test/pull/44))
+
 ## 3.0.0
 
 * BREAKING: Remove dependency on `webdrivers` gem. It's now expected that ChromeDriver is present on the underlying operating system. ([#43](https://github.com/alphagov/govuk_test/pull/43))

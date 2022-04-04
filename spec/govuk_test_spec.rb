@@ -13,7 +13,7 @@ RSpec.describe GovukTest do
     it "uses .headless_chrome_selenium_options to set default options" do
       GovukTest.configure
       driver = Capybara.drivers[:headless_chrome].call
-      expect(driver.options[:options].args)
+      expect(driver.options[:capabilities].args)
         .to eq(GovukTest.headless_chrome_selenium_options.args)
     end
   end
