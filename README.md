@@ -66,6 +66,6 @@ end
 [headless-chrome]: https://developers.google.com/web/updates/2017/04/headless-chrome
 [Jasmine]: https://github.com/jasmine/jasmine_selenium_runner
 
-## License
+## Licence
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License](LICENCE).
