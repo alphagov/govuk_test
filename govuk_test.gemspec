@@ -5,13 +5,14 @@ require "govuk_test/version"
 Gem::Specification.new do |spec|
   spec.name          = "govuk_test"
   spec.version       = GovukTest::VERSION
-  spec.authors     = ["GOV.UK Dev"]
-  spec.email       = ["govuk-dev@digital.cabinet-office.gov.uk"]
+  spec.authors       = ["GOV.UK Dev"]
+  spec.email         = ["govuk-dev@digital.cabinet-office.gov.uk"]
 
   spec.summary       = "Test setup for GOV.UK"
   spec.description   = "Test configuration and dependencies for applications on GOV.UK"
   spec.homepage      = "https://github.com/alphagov/govuk_test"
   spec.license       = "MIT"
+
   spec.required_ruby_version = ">= 3.0"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features|bin)/}) }
