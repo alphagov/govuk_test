@@ -18,7 +18,7 @@ module GovukTest
 
   def self.headless_chrome_selenium_options
     Selenium::WebDriver::Chrome::Options.new.tap do |options|
-      options.headless!
+      options.add_argument("--headless")
       options.add_argument("--no-sandbox") if ENV["GOVUK_TEST_CHROME_NO_SANDBOX"]
     end
   end
