@@ -7,9 +7,24 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
-## Unreleased
+## 4.0.0
 
-* Drop support for Ruby 2.7.
+* Replace call to deprecated `Selenium::WebDriver::Chrome::Options#headless!` method ([#63](https://github.com/alphagov/govuk_test/pull/63))
+* Bump GitHub actions/checkout from 3 to 4 ([#59](https://github.com/alphagov/govuk_test/pull/59))
+* Update rubocop-govuk requirement from = 4.11.0 to = 4.12.0 ([#58](https://github.com/alphagov/govuk_test/pull/58))
+* Update rubocop-govuk requirement from = 4.10.0 to = 4.11.0 ([#57](https://github.com/alphagov/govuk_test/pull/57))
+* Fix spec.files in govuk_test.gemspec ([#56](https://github.com/alphagov/govuk_test/pull/56))
+* Add rubocop-govuk ([#55](https://github.com/alphagov/govuk_test/pull/55))
+* BREAKING: Drop support for Ruby 2.7 ([#54](https://github.com/alphagov/govuk_test/pull/54))
+* Use .yml for workflow files ([#52](https://github.com/alphagov/govuk_test/pull/52))
+* Add Ruby 3.2 to CI test matrix ([#51](https://github.com/alphagov/govuk_test/pull/51))
+* Link to MIT Licence in repository ([#50](https://github.com/alphagov/govuk_test/pull/50))
+* Bump GitHub actions/checkout from 2 to 3 ([#49](https://github.com/alphagov/govuk_test/pull/49))
+* Configure Dependabot for GitHub Actions ([#48](https://github.com/alphagov/govuk_test/pull/48))
+* Configure Dependabot for Bundler ([#47](https://github.com/alphagov/govuk_test/pull/47))
+* Switch from Jenkins to GitHub Actions for CI ([#46](https://github.com/alphagov/govuk_test/pull/46))
+* Update Ruby from 2.6.6 to 2.7.6 ([#45](https://github.com/alphagov/govuk_test/pull/45))
+
 
 ## 3.0.1
 
