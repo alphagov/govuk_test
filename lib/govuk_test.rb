@@ -9,7 +9,7 @@ module GovukTest
     Capybara.register_driver :headless_chrome do |app|
       Capybara::Selenium::Driver.new(app,
                                      browser: :chrome,
-                                     capabilities: headless_chrome_selenium_options)
+                                     options: headless_chrome_selenium_options)
     end
 
     Capybara.javascript_driver = :headless_chrome
