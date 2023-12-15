@@ -23,7 +23,7 @@ RSpec.describe GovukTest do
       options = described_class.headless_chrome_selenium_options
 
       expect(options).to be_instance_of(Selenium::WebDriver::Chrome::Options)
-      expect(options.args).to include("--headless")
+      expect(options.args).to include("--headless=new")
     end
 
     it "can be configured with an environment variable to run in no-sandbox" do
