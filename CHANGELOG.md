@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 4.0.2
+
+* Use `--headless=new` option for Chrome webdriver to work with the new version of Chrome (versions post 120)
+
 ## 4.0.1
 
 * Use `options` instead of `capabilities` in `Capybara::Selenium::Driver#initialize`. The use of `capabilities` was deprecated in selenium 4.8.0 and was removed in selenium 4.12.0.
