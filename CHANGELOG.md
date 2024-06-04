@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 4.1.0
+
+* Drop support for Ruby 3.0
+
 ## 4.0.2
 
 * Use `--headless=new` option for Chrome webdriver to work with the new version of Chrome (versions post 120)
