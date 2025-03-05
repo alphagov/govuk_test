@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 4.1.1
+
+* Ratchet version number to add Github Actions Linting checks
+
 ## 4.1.0
 
 * Drop support for Ruby 3.0
