@@ -7,6 +7,10 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 4.1.2
+
+* Configure CI workflow to handle concurrent releases ([#112](https://github.com/alphagov/govuk_test/pull/112))
+
 ## 4.1.1
 
 * Ratchet version number to add Github Actions Linting checks
