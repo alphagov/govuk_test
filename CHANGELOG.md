@@ -7,6 +7,11 @@
   useful summary for people upgrading their application, not a replication
   of the commit log.
 
+## 5.0.0
+
+* BREAKING: Drop support for Ruby 3.1 and 3.2
+* Bump Ruby to 4.0.10
+
 ## 4.1.3
 * Set dependency cooldowns in Dependabot
 
